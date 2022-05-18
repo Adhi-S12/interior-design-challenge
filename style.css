@@ -355,6 +355,7 @@ footer {
   main {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
+    min-height: 70vh;
     place-items: center;
   }
 
