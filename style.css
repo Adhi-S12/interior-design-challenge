@@ -1,0 +1,422 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* After Reset */
+
+:root {
+  --dark: #181719;
+  --lightgray: #A9A9A9;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 2rem;
+  transition: all .7s ease-in-out;
+}
+
+.hide {
+  display: none;
+  transition: all .7s ease-in-out;
+
+
+}
+
+.show {
+  display: block;
+  position: absolute;
+  background-color: var(--dark);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .7s ease-in-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: #F2F2F2;
+  font-size: 4rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.burger-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  fill: #F2F2F2;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  transition: all .7s ease-in-out;
+
+}
+
+.nav-item {
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 2.4rem;
+  cursor: pointer;
+}
+
+.nav-item:nth-child(1) {
+  position: relative;
+  font-weight: 700;
+
+}
+
+.nav-item:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 2.8rem;
+  right: 10%;
+  display: inline-block;
+  width: 80%;
+  border-bottom: 2px solid #fff;
+}
+
+/* logo */
+
+.logo {
+  font-family: 'Crimson Pro';
+  font-size: 1.4rem;
+  font-weight: 200;
+  line-height: 1.6rem;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  padding: .5rem;
+}
+
+header {
+  margin-bottom: 4rem;
+}
+
+.article-header {
+  font-family: Lora;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.article-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 75%;
+  margin: 25px 0;
+
+}
+
+.read-more {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFF;
+  text-decoration: none;
+  margin-bottom: 25px;
+  display: block;
+}
+
+
+
+.article-author-card {
+  width: 300px;
+  background-color: var(--dark);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  position: relative;
+  margin: auto;
+  bottom: 50px;
+  left: 10px;
+}
+
+.card-row-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.img-container {
+  width: 60px;
+  height: 50px;
+}
+
+.author-img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+
+.author-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 5px;
+
+}
+
+.author-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #828282;
+
+}
+
+.card-row-2 {
+  font-family: Lora;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+footer {
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+  opacity: .5;
+  position: relative;
+  top: 30px;
+}
+
+/* Desktop Size */
+
+@media screen and (min-width: 1100px) {
+  body {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: 'Crimson Pro';
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 1rem;
+
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: end;
+
+  }
+
+  .nav-item {
+    margin-left: 4rem;
+    text-align: right;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .nav-item:nth-child(1) {
+    font-weight: 700;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    place-items: center;
+  }
+
+  .article-author-card {
+    bottom: 90px;
+    left: 90px;
+  }
+
+  .article-header {
+    font-family: Lora;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 61px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .article-content {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+  }
+
+  .read-more {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+
+  .author-name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+
+  .author-role {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0em;
+  }
+
+  .card-row-2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    margin-top: 10px;
+
+  }
+
+  .article-author-card {
+    width: 410px;
+    padding: 3rem;
+  }
+}
